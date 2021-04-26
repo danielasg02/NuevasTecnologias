@@ -6,8 +6,11 @@
 package tarea3.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import tarea3.service.DocumentoService;
 import tarea3.modelo.TipoDocumento;
@@ -21,9 +24,9 @@ import tarea3.modelo.TipoDocumento;
 public class DocumentoController {
     @Autowired
     DocumentoService docu;
-    @DeleteMapping(value = "/borrarDocumento", produces = MediaType.APPLICATION_JSON_VALUE)
-    public TipoDocumento borrarDocumento (TipoDocumento documento){
-        return docu.borrarDocu(documento);
+    @DeleteMapping(path = "borrarDocumento")
+    TipoDocumento borrarTipoDocumento(@RequestBody TipoDocumento tipoDocumento) {
+        return docu.borrarDocu(tipoDocumento);
     }
     
 }

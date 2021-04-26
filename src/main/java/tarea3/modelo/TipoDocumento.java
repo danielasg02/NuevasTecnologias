@@ -50,6 +50,13 @@ public class TipoDocumento implements Serializable {
         this.id = id;
     }
 
+    public TipoDocumento(Integer id, String nombre, String sigla) {
+        this.id = id;
+        this.nombre = nombre;
+        this.sigla = sigla;
+    }
+    
+
     public Integer getId() {
         return id;
     }

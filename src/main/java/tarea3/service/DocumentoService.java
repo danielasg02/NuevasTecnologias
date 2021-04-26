@@ -7,7 +7,7 @@ package tarea3.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tarea3.dao.IDocumento;
+import tarea3.dao.DocumentoDaoImple;
 import tarea3.modelo.TipoDocumento;
 
 /**
@@ -17,7 +17,7 @@ import tarea3.modelo.TipoDocumento;
 @Service
 public class DocumentoService {
     @Autowired
-    IDocumento docu;
+    DocumentoDaoImple docu;
     public TipoDocumento borrarDocu (TipoDocumento documento){
         return docu.borrarDocumento(documento);
     }

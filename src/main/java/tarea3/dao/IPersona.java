@@ -6,6 +6,7 @@
 
 package tarea3.dao;
 
+import java.util.List;
 import tarea3.modelo.Persona;
 /**
  *
@@ -14,4 +15,5 @@ import tarea3.modelo.Persona;
 public interface IPersona {
     
     public Persona crearPersona (Persona persona);
+    public List<Persona> leerPersona ();
 }

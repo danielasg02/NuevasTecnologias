@@ -19,7 +19,7 @@ public class DocumentoDaoImple implements IDocumento{
     IDocumentoJpa docuJpa;
     @Override
     public TipoDocumento borrarDocumento(TipoDocumento documento) {
-        TipoDocumento td = documento;
+        TipoDocumento td = docuJpa.findById(documento.getId()).get();
         docuJpa.delete(td);
         return td;
     }

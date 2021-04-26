@@ -5,6 +5,7 @@
  */
 package tarea3.dao;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import tarea3.modelo.Persona;
@@ -21,4 +22,10 @@ public class PersonaDaoImple implements IPersona{
     public Persona crearPersona(Persona persona) {
        return p.save(persona);
     }
+
+    @Override
+    public List<Persona> leerPersona() {
+        return p.findAll();
+    }
+    
 }
