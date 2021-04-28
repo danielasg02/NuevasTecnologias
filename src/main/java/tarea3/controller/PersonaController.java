@@ -28,7 +28,7 @@ public class PersonaController {
         return per.crearPerso(persona);
     }
     @GetMapping(value = "/verPersona", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Persona> verCiudad (){
+    public List<Persona> verPersona (){
         return per.verPersona();
     }
 }
